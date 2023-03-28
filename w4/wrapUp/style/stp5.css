@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+}
+
+.commonStyle1 {
+  background-color: paleturquoise;
+}
+
+#elem1 {
+  margin: 16px;
+  padding: 16px;
+}
+
+#elem2 {
+  margin: 10px 20px 30px 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#elem3 {
+  margin: 40px 50px;
+  padding-inline: 20px;
+}
+
+#elem4 {
+  margin: 10px auto;
+  max-width: 960px;
+  padding-block: 20px;
+  border: 2px dotted #000;
+}
+
+#elem5 {
+  background-color: coral;
+}
+
+#elem6 {
+  background-color: cornflowerblue;
+}
