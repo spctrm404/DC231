@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navBar {
+  padding: 8px 24px;
+  font-family: "Noto Sans KR", sans-serif;
+  min-height: 10px;
+  background-color: grey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.navBar__buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.navBar__button > a {
+  color: white;
+  text-decoration: none;
+}
+
+.navBar__logo {
+  height: 36px;
+}
