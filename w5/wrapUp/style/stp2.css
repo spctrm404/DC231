@@ -1,42 +1,28 @@
-* {
-  padding: 0;
-  margin: 0;
-}
-
 body {
-  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.card-product {
-  max-width: 100%;
+.topNav {
+  background-color: grey;
+  /* 나중에 지울것 */
+  min-height: 10px;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.card-product__img > img {
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  width: 100%;
+.topNav__logo {
+  height: 36px;
 }
 
-.card-product__feature {
-  color: rgb(158, 53, 0);
-  margin-top: 12px;
+.topNav__buttons {
+  display: flex;
+  gap: 16px;
 }
 
-.card-product__category,
-.card-product__variations,
-.card-product__price-discount {
-  color: rgb(117, 117, 117);
-}
-
-.card-product__variations {
-  margin-bottom: 10px;
-}
-
-.card-product__price-discount {
-  text-decoration: line-through;
-}
-
-.card-product__discountRate {
-  margin-top: 10px;
-  color: rgb(65, 161, 57);
+.topNav__button {
+  color: white;
+  text-transform: capitalize;
 }

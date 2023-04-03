@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/topic-flex.css" />
+    <title>topic - flex</title>
+  </head>
+  <body>
+    <h1>display: flex 에 수반되는 주요 css property</h1>
+    <dl>
+      <dt>flex-direction</dt>
+      <dd>정렬 방향을 설정.</dd>
+      <dd><code>row</code> : 가로 방향</dd>
+      <dd><code>column</code> : 세로 방향</dd>
+      <dt>flex-wrap</dt>
+      <dd>
+        자식 요소들이 정렬 방향을 따라 정렬되기에 넘칠 때 줄바꿈을 할지의 여부.
+      </dd>
+      <dd><code>wrap</code> : 줄 바꿈</dd>
+      <dd><code>nowrap</code> : 줄 바꾸지 않음</dd>
+      <dt>justify-content</dt>
+      <dd>정렬 방향을 따라 자식들을 어떻게 배치할지에 대한 속성</dd>
+      <dd><code>start</code> : 좌측 혹은 상단부터 배치</dd>
+      <dd><code>end</code> : 우측 혹은 하단부터 배치</dd>
+      <dd><code>center</code> : 중앙에 배치</dd>
+      <dd>
+        <code>space-around</code> : 자식 요소를 양끝에 붙이고 등간으로 배치
+      </dd>
+      <dd>
+        <code>space-between</code> : 자식 요소의 좌우에 같은 간격을 주면서 배치
+      </dd>
+      <dd>
+        <code>space-evenly</code> : 자식 요소를 양끝에서 때고서 등간으로 배치
+      </dd>
+      <dt>align-items</dt>
+      <dd>정렬 방향에 수직으로 자식들을 어떻게 배치할지에 대한 속성</dd>
+      <dd><code>start</code> : 좌측 혹은 상단에 배치</dd>
+      <dd><code>end</code> : 우측 혹은 하단에 배치</dd>
+      <dd><code>center</code> : 중앙에 배치</dd>
+      <dd>
+        <code>stretch</code> : 좌우를 가득 채우거나, 상하를 가득 채우도록 늘어남
+      </dd>
+    </dl>
+    <h1>
+      부모요소의 크기, 정확히는 정렬 방향의 치수가 자식요소에 의해 결정되는지,
+      아니면 자식과 무관하게 결정되는지에 따라 적용할 수 있는 속성이 다르다.
+    </h1>
+    <h2>부모의 크기는 자식과 무관 (가로)</h2>
+    <div class="parent irrel hori">
+      <div class="child">child1</div>
+      <div class="child big">child2</div>
+      <div class="child">child3</div>
+    </div>
+    <h2>부모의 크기는 자식을 따름 (가로)</h2>
+    <div class="parent rel hori">
+      <div class="child">child1</div>
+      <div class="child big">child2</div>
+      <div class="child">child3</div>
+    </div>
+    <h2>부모의 크기는 자식과 무관 (세로)</h2>
+    <div class="parent irrel vert">
+      <div class="child">child1</div>
+      <div class="child big">child2</div>
+      <div class="child">child3</div>
+    </div>
+    <h2>부모의 크기는 자식을 따름 (세로)</h2>
+    <div class="parent rel vert">
+      <div class="child">child1</div>
+      <div class="child big">child2</div>
+      <div class="child">child3</div>
+    </div>
+  </body>
+</html>

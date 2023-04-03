@@ -1,58 +1,35 @@
-* {
-  padding: 0;
-  margin: 0;
-}
-
 body {
-  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.container-flex {
+.topNav {
+  background-color: grey;
+  /* 나중에 지울것 */
+  min-height: 10px;
+  padding: 8px 16px;
   display: flex;
-  flex-wrap: wrap;
-  margin-inline: auto;
-  max-width: 1200px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topNav__logo {
+  height: 36px;
+}
+
+.topNav__buttons {
+  display: flex;
   gap: 16px;
-  container-type: inline-size;
-  container-name: container-flex;
 }
 
-.card-product {
-  max-width: 100%;
+.topNav__button {
+  font-family: "Lobster Two", cursive;
+  /* font-family: "Redacted Script", cursive; */
+  color: white;
+  text-transform: capitalize;
 }
 
-@container container-flex (min-width: 700px) {
-  .card-product {
-    max-width: calc((100% - 16px * 2) / 3);
-  }
-}
-
-.card-product__img > img {
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  width: 100%;
-}
-
-.card-product__feature {
-  color: rgb(158, 53, 0);
-  margin-top: 12px;
-}
-
-.card-product__category,
-.card-product__variations,
-.card-product__price-discount {
-  color: rgb(117, 117, 117);
-}
-
-.card-product__variations {
-  margin-bottom: 10px;
-}
-
-.card-product__price-discount {
-  text-decoration: line-through;
-}
-
-.card-product__discountRate {
-  margin-top: 10px;
-  color: rgb(65, 161, 57);
+.topNav__button > a {
+  color: white;
+  text-decoration: none;
 }

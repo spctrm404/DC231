@@ -1,0 +1,58 @@
+.parent {
+  padding: 8px 16px;
+}
+
+.irrel {
+  background-color: cornflowerblue;
+}
+
+.rel {
+  background-color: salmon;
+}
+
+.rel.hori {
+  width: fit-content;
+}
+
+.irrel.vert {
+  height: 500px;
+}
+
+.child {
+  padding: 16px 64px;
+  border: 1px solid rgb(73, 40, 2);
+  /* width: fit-content; */
+  background-color: burlywood;
+}
+
+.big {
+  font-size: 1.5rem;
+}
+
+.parent {
+  display: flex;
+
+  /* gap: 0; */
+  gap: 16px;
+
+  /* flex-direction: row; */
+  /* flex-direction: row-reverse; */
+  flex-direction: column;
+  /* flex-direction: column-reverse; */
+
+  flex-wrap: nowrap;
+  /* flex-wrap: wrap; */
+
+  justify-content: start;
+  /* justify-content: end; */
+  /* justify-content: center; */
+  /* justify-content: space-between; */
+  /* justify-content: space-around; */
+  /* justify-content: space-evenly; */
+
+  /* align-items: stretch; */
+  /* align-items: start; */
+  align-items: end;
+  /* align-items: center; */
+  /* align-items: baseline; */
+}
