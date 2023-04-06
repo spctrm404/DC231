@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.topNav {
+  background-color: grey;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+}
+
+.topNav a {
+  color: white;
+  text-decoration: none;
+}
+
+.topNav__logo {
+  /* width: 200px; */
+  height: 36px;
+}
+
+.topNav__buttons {
+  display: flex;
+  gap: 16px;
+}
