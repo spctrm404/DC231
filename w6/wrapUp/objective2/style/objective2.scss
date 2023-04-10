@@ -19,8 +19,13 @@
 .container {
   --container__padding: 24px;
   margin-inline: auto;
-  padding-inline: var(--container__padding);
-  max-width: calc(1200px + 2 * var(--container__padding));
+  padding-inline: var(
+    --container__padding
+  );
+  max-width: calc(
+    1200px + 2 *
+      var(--container__padding)
+  );
 }
 
 .flex {

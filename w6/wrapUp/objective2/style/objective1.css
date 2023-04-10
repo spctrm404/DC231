@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  max-width: 78rem;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  background-color: slateblue;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  color: white;
+  text-transform: capitalize;
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  leading-trim: both;
+  text-edge: cap alphabetic;
+}
+.button-text {
+  padding-inline: unset;
+  background-color: unset;
+  color: unset;
+}
+
+.nav {
+  background-color: black;
+  color: white;
+}
+.nav .wrapper {
+  padding-block: 0.625rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.nav__buttonWrapper {
+  display: flex;
+  gap: 24px;
+}
+
+.main .wrapper {
+  padding-block: 4rem;
+}
+
+#hero1 {
+  text-align: center;
+}
+#hero1 h2 {
+  margin-bottom: 0.75rem;
+}
+#hero1 p {
+  margin-inline: auto;
+  max-width: 50ch;
+  margin-bottom: 1.5rem;
+}
+#hero1 .button {
+  margin-inline: auto;
+}
+#hero1 .main__media {
+  background-color: bisque;
+  aspect-ratio: 16/9;
+}
+
+#hero2 {
+  background-color: azure;
+}
+#hero2 .wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+#hero2 .wrapper > * {
+  width: calc((100% - 1.5rem) / 2);
+}
+#hero2 .main__text {
+  padding-right: 10%;
+}
+#hero2 .main__text h2 {
+  margin-bottom: 0.75rem;
+}
+#hero2 .main__text p {
+  margin-bottom: 1rem;
+}
+#hero2 .main__buttonWrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+}
+#hero2 .main__media {
+  background-color: bisque;
+  aspect-ratio: 4/3;
+}

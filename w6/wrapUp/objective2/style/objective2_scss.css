@@ -1,8 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .nav {
@@ -14,35 +13,21 @@
 }
 .nav .wrapper {
   padding-block: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 .nav__textMenus, .nav__userButtons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .nav__textMenus {
   gap: 64px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 .nav__userButtons {
   gap: 32px;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  justify-content: left;
+  align-items: baseline;
 }
 
 .main .wrapper {
@@ -61,22 +46,14 @@
 }
 
 .flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .flex--center {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 .flex--left {
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  justify-content: left;
 }
 
 .button {
@@ -135,16 +112,9 @@
   gap: 24px;
 }
 .hero--2 .text {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   margin-right: 64px;
 }
 .hero--2 .text h1 {
