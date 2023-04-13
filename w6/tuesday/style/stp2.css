@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section {
+  /* background-color: red; */
+}
+
+.container {
+  --px: 36px;
+  /* background-color: green; */
+  max-width: calc(1200px + 2 * var(--px));
+  margin-inline: auto;
+  padding-inline: var(--px);
+}
+
+.wrapper {
+  /* background-color: blue; */
+  padding-block: 32px;
+}
