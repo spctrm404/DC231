@@ -1,0 +1,113 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
+img {
+  display: block;
+}
+
+.container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+  max-width: 960px;
+}
+
+@media (width < 37.5rem) {
+  .container {
+    padding-inline: 1rem;
+  }
+}
+.wrapper {
+  padding-block: 2rem;
+  min-height: 100dvh;
+}
+
+#section1 .wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+#card2 {
+  position: relative;
+}
+
+.card {
+  max-width: 18.75rem;
+}
+.card__roundedBorder {
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.5rem;
+  background-color: white;
+  overflow: hidden;
+}
+.card__img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card__text {
+  padding: 1rem;
+}
+.card__text h3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.card__text p {
+  line-height: 1.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -moz-line-clamp: 4;
+  -webkit-line-clamp: 4;
+  max-height: 6rem;
+}
+.card__buttons {
+  padding: 1rem;
+  display: flex;
+  justify-content: end;
+  gap: 0.5rem;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  font-weight: bold;
+  background-color: blue;
+  color: rgba(255, 255, 255, 0.87);
+  border-radius: 62.4375rem;
+}
+.button--type-text {
+  background-color: unset;
+  color: blue;
+  padding-inline: 0.5rem;
+}
+
+.badge {
+  position: absolute;
+  right: -0.5rem;
+  top: -0.5rem;
+  aspect-ratio: 1/1;
+  min-width: 1.25rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.25rem;
+  font-size: 0.6875rem;
+  line-height: 0.75rem;
+  font-weight: bold;
+  background-color: red;
+  color: rgba(255, 255, 255, 0.87);
+  border-radius: 62.4375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

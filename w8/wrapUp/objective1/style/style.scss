@@ -1,0 +1,89 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
+img {
+  display: block;
+}
+
+.container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+@media (width < 37.5rem) {
+  .container {
+    padding-inline: 1rem;
+  }
+}
+
+.wrapper {
+  padding-block: 2rem;
+}
+
+#section1 {
+  .wrapper {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+.card {
+  max-width: 300px;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.5rem;
+  background-color: #ffffff;
+  overflow: hidden;
+  &__img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+  &__text {
+    padding: 1rem;
+    h3 {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      line-height: 1.5rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -moz-box;
+      display: -webkit-box;
+      -moz-box-orient: vertical;
+      -webkit-box-orient: vertical;
+      -moz-line-clamp: 5;
+      -webkit-line-clamp: 5;
+      max-height: 7.5rem;
+    }
+  }
+  &__buttons {
+    padding: 1rem;
+    display: flex;
+    justify-content: end;
+    gap: 0.5rem;
+  }
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
+  font-weight: bold;
+  background-color: blue;
+  color: rgba($color: #ffffff, $alpha: 0.87);
+  border-radius: 62.4375rem;
+  &--type {
+    &-text {
+      background-color: unset;
+      color: blue;
+      padding-inline: 0.5rem;
+    }
+  }
+}
