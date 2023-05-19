@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>w10 - stp5</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .container {
+        margin-inline: auto;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      }
+      .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 12.5rem;
+        aspect-ratio: 1 / 1;
+        background-color: beige;
+        border: 1px solid #000;
+        transition: background-color 250ms
+          ease-in-out;
+      }
+      .box:hover {
+        background-color: bisque;
+      }
+      .box--clicked {
+        background-color: cornflowerblue;
+      }
+      .box--clicked:hover {
+        background-color: cornflowerblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="box1" class="box">box1</div>
+      <div id="box2" class="box">box2</div>
+      <div id="box3" class="box">box3</div>
+    </div>
+  </body>
+  <script>
+    // document.getElementById("box1").onclick =
+    //   function () {
+    //     document.getElementById("box1").style =
+    //       "background-color: cornflowerBlue";
+    //   };
+    // let aBox = document.getElementById("box1");
+    // aBox.onclick = function () {
+    //   aBox.style =
+    //     "background-color: cornflowerBlue";
+    // };
+    let aBox = document.getElementById("box1");
+    aBox.onclick = function () {
+      aBox.classList.toggle("box--clicked");
+    };
+  </script>
+</html>
