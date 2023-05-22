@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="style/style.css"
+    />
+    <title>w11 - stp3</title>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+  </head>
+  <body>
+    <div class="section blank">
+      <div class="container"></div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <lottie-player
+          id="firstLottie"
+          src="https://assets10.lottiefiles.com/packages/lf20_o1DawfZmz8.json"
+          style="width: 400px; height: 400px"
+        ></lottie-player>
+      </div>
+    </div>
+    <div class="section blank">
+      <div class="container"></div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <lottie-player
+          src="https://assets9.lottiefiles.com/packages/lf20_88jP8mNam2.json"
+          background="transparent"
+          speed="1"
+          style="width: 300px; height: 300px"
+          hover
+          loop
+          autoplay
+        ></lottie-player>
+      </div>
+    </div>
+    <div class="section blank">
+      <div class="container"></div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <lottie-player
+          id="darunirum"
+          src="https://assets9.lottiefiles.com/packages/lf20_88jP8mNam2.json"
+          style="width: 400px; height: 400px"
+          >"></lottie-player
+        >
+      </div>
+    </div>
+    <div class="section blank">
+      <div class="container"></div>
+    </div>
+  </body>
+  <script>
+    LottieInteractivity.create({
+      mode: "scroll",
+      player: "#firstLottie",
+      actions: [
+        {
+          visibility: [0, 1],
+          type: "seek",
+          frames: [0, 240],
+        },
+      ],
+    });
+    LottieInteractivity.create({
+      mode: "scroll",
+      player: "#darunirum",
+      actions: [
+        {
+          visibility: [0, 1],
+          type: "seek",
+          frames: [0, 64],
+        },
+      ],
+    });
+  </script>
+</html>
