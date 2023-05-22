@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui;
+}
+
+.section--placeholder {
+  background-color: beige;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: azure; */
+  max-width: 800px;
+  min-height: max(50rem, 100dvh);
+  margin-inline: auto;
+  padding: 4rem 2rem;
+}
+
+.lottie {
+  width: 80%;
+}
+
+body::before {
+  content: "";
+  width: 100%;
+  background-color: red;
+  position: fixed;
+  top: calc(50% - 0.0313rem);
+  bottom: calc(50% - 0.0313rem);
+}
+
+.container:has(#lottie5) {
+  position: relative;
+}
+
+.container:has(#lottie5)::before {
+  content: "";
+  width: 100%;
+  background-color: blue;
+  position: absolute;
+  top: calc(50% - 0.0313rem);
+  bottom: calc(50% - 0.0313rem);
+}

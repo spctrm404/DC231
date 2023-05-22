@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="style/style.css"
+    />
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <title>w11 - stp3</title>
+  </head>
+  <body>
+    <div class="section section--placeholder">
+      <div class="container">
+        <h2>lottie 샘플: 기본</h2>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <lottie-player
+          id="lottie1"
+          class="lottie"
+          src="https://assets9.lottiefiles.com/packages/lf20_xD7kztjVaC.json"
+          background="transparent"
+          speed="1"
+          loop
+          controls
+          autoplay
+        ></lottie-player>
+      </div>
+    </div>
+    <div class="section section--placeholder">
+      <div class="container">
+        <h2>lottie 샘플: 호버</h2>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <lottie-player
+          id="lottie2"
+          class="lottie"
+          src="https://assets9.lottiefiles.com/packages/lf20_xD7kztjVaC.json"
+          background="transparent"
+          speed="1"
+          hover
+          loop
+        ></lottie-player>
+      </div>
+    </div>
+    <div class="section section--placeholder">
+      <div class="container">
+        <h2>lottie 샘플: 스크롤</h2>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <lottie-player
+          id="lottie3"
+          class="lottie"
+          src="https://assets9.lottiefiles.com/packages/lf20_xD7kztjVaC.json"
+          >"></lottie-player
+        >
+      </div>
+    </div>
+    <div class="section section--placeholder">
+      <div class="container">
+        <h2>lottie 샘플: 클릭</h2>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <lottie-player
+          id="lottie4"
+          class="lottie"
+          src="https://assets9.lottiefiles.com/packages/lf20_xD7kztjVaC.json"
+          >"></lottie-player
+        >
+      </div>
+    </div>
+    <div class="section section--placeholder">
+      <div class="container">
+        <h2>
+          lottie 샘플: 화면에 충분이 들어오면
+        </h2>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <lottie-player
+          id="lottie5"
+          class="lottie"
+          src="https://assets9.lottiefiles.com/packages/lf20_xD7kztjVaC.json"
+          >"></lottie-player
+        >
+      </div>
+    </div>
+    <div class="section section--placeholder">
+      <div class="container">
+        <h2>끗!</h2>
+      </div>
+    </div>
+  </body>
+  <script>
+    LottieInteractivity.create({
+      mode: "scroll",
+      player: "#lottie3",
+      actions: [
+        {
+          visibility: [0, 1],
+          type: "seek",
+          frames: [0, 240],
+        },
+      ],
+    });
+    LottieInteractivity.create({
+      player: "#lottie4",
+      mode: "cursor",
+      actions: [
+        {
+          type: "click",
+          forceFlag: false,
+        },
+      ],
+    });
+    LottieInteractivity.create({
+      player: "#lottie5",
+      mode: "scroll",
+      actions: [
+        {
+          visibility: [0.5, 1.0],
+          type: "play",
+        },
+      ],
+    });
+  </script>
+</html>
