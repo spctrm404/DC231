@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+main {
+  width: min(80ch, 100% - 4rem);
+  margin-inline: auto;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+}
