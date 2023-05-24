@@ -1,25 +1,28 @@
-let options = {
+const options = {
   root: null,
   rootMargin: "0px",
-  threshold: [1],
+  threshold: [0.75],
 };
 
-let callback = (entries, observer) => {
-  entries.forEach((entry) => {
-    console.log(entry);
-  });
-};
-
-const observer = new IntersectionObserver((entries) => {
+const callback = (entries, observer) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      console.log(entry.target);
+      let animatingTargets = entry.target.querySelectorAll(".content");
+      animatingTargets.forEach((animatingTarget) => {
+        animatingTarget.classList.add("animate");
+      });
     } else {
+      let animatingTargets = entry.target.querySelectorAll(".content");
+      animatingTargets.forEach((animatingTarget) => {
+        animatingTarget.classList.remove("animate");
+      });
     }
   });
-}, options);
+};
 
-let targets = document.querySelectorAll(".content");
-targets.forEach((target) => {
-  observer.observe(target);
+const observer = new IntersectionObserver(callback, options);
+
+const observingTargets = document.querySelectorAll("section");
+observingTargets.forEach((observingTarget) => {
+  observer.observe(observingTarget);
 });
