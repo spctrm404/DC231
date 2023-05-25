@@ -4,25 +4,19 @@ const options = {
   threshold: [0.75],
 };
 
-const callback = (entries, observer) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      let animatingTargets = entry.target.querySelectorAll(".content");
-      animatingTargets.forEach((animatingTarget) => {
-        animatingTarget.classList.add("animate");
-      });
+const callback = (triggers, observer) => {
+  triggers.forEach((trigger) => {
+    if (trigger.isIntersecting) {
+      trigger.target.classList.add("triggered");
     } else {
-      let animatingTargets = entry.target.querySelectorAll(".content");
-      animatingTargets.forEach((animatingTarget) => {
-        animatingTarget.classList.remove("animate");
-      });
+      trigger.target.classList.remove("triggered");
     }
   });
 };
 
 const observer = new IntersectionObserver(callback, options);
 
-const observingTargets = document.querySelectorAll("section");
-observingTargets.forEach((observingTarget) => {
-  observer.observe(observingTarget);
+const animTriggers = document.querySelectorAll(".animTrigger");
+animTriggers.forEach((animTrigger) => {
+  observer.observe(animTrigger);
 });
