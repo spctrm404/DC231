@@ -4,16 +4,12 @@
   box-sizing: border-box;
 }
 
-:root {
-  --body-bg: hsl(0, 0%, 12%);
-}
-
 html {
   color-scheme: dark light;
 }
 
 body {
-  background: var(--body-bg);
+  background: hsl(0, 0%, 12%);
   color: white;
   font-family: system-ui;
   font-size: 1.25rem;
@@ -32,56 +28,43 @@ body {
   text-align: center;
 }
 
-.section-title {
-  font-size: 2.25rem;
-}
-
 section {
   padding-block: 5rem;
 }
+section-title {
+  font-size: 2.25rem;
+}
 
 .diagonal {
-  --skew-angle: -5deg;
-  --background: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59);
-
   position: relative;
   isolation: isolate;
 }
-
 .diagonal::after {
   content: "";
-  background: var(--background);
+  background: linear-gradient(45deg in oklch, oklch(70% 0.25 30) 0%, oklch(70% 0.25 150) 50%, oklch(70% 0.25 270) 100%);
   position: absolute;
   z-index: -1;
   inset: 0;
-  transform: skewY(var(--skew-angle));
+  transform: skewY(-5deg);
 }
 
 .spikes {
-  --spike-width: 50px;
-  --spike-height: 10px;
-  --spike-color: var(--body-bg);
-
   position: relative;
   color: black;
-  background: linear-gradient(to right, #fdc830, #f37335);
+  background: linear-gradient(to right in oklch, oklch(90% 0.25 0) 0%, oklch(90% 0.25 90) 100%);
 }
-
-.spikes::before,
-.spikes::after {
+.spikes::before, .spikes::after {
   content: "";
   position: absolute;
   width: 100%;
-  height: var(--spike-height);
-  background: var(--spike-color);
+  height: 10px;
+  background: hsl(0, 0%, 12%);
   -webkit-mask-image: url("../assets/triangle.svg");
-  -webkit-mask-size: var(--spike-width) var(--spike-height);
-  /* -webkit-mask-repeat: repeat-x; */
-  mask-image: url("../assets/triangle.svg");
-  mask-size: var(--spike-width) var(--spike-height);
+          mask-image: url("../assets/triangle.svg");
+  -webkit-mask-size: 50px 10px;
+          mask-size: 50px 10px;
   /* mask-repeat: repeat-x; */
 }
-
 .spikes::before {
   top: 0;
 }
@@ -93,17 +76,7 @@ section {
 .wavy {
   /* mask created with 
   https://css-generators.com/wavy-shapes/ */
-
   background: linear-gradient(to right, #00f260, #0575e6);
-
-  --mask: radial-gradient(50.39px at 50% 68.75px, #000 99%, #0000 101%)
-      calc(50% - 50px) 0/100px 51% repeat-x,
-    radial-gradient(50.39px at 50% -43.75px, #0000 99%, #000 101%) 50% 25px/100px
-      calc(51% - 25px) repeat-x,
-    radial-gradient(50.39px at 50% calc(100% - 68.75px), #000 99%, #0000 101%)
-      calc(50% - 50px) 100%/100px 51% repeat-x,
-    radial-gradient(50.39px at 50% calc(100% + 43.75px), #0000 99%, #000 101%)
-      50% calc(100% - 25px) / 100px calc(51% - 25px) repeat-x;
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
+  -webkit-mask: radial-gradient(50.39px at 50% 68.75px, #000 99%, rgba(0, 0, 0, 0) 101%) calc(50% - 50px) 0/100px 51% repeat-x, radial-gradient(50.39px at 50% -43.75px, rgba(0, 0, 0, 0) 99%, #000 101%) 50% 25px/100px calc(51% - 25px) repeat-x, radial-gradient(50.39px at 50% calc(100% - 68.75px), #000 99%, rgba(0, 0, 0, 0) 101%) calc(50% - 50px) 100%/100px 51% repeat-x, radial-gradient(50.39px at 50% calc(100% + 43.75px), rgba(0, 0, 0, 0) 99%, #000 101%) 50% calc(100% - 25px)/100px calc(51% - 25px) repeat-x;
+          mask: radial-gradient(50.39px at 50% 68.75px, #000 99%, rgba(0, 0, 0, 0) 101%) calc(50% - 50px) 0/100px 51% repeat-x, radial-gradient(50.39px at 50% -43.75px, rgba(0, 0, 0, 0) 99%, #000 101%) 50% 25px/100px calc(51% - 25px) repeat-x, radial-gradient(50.39px at 50% calc(100% - 68.75px), #000 99%, rgba(0, 0, 0, 0) 101%) calc(50% - 50px) 100%/100px 51% repeat-x, radial-gradient(50.39px at 50% calc(100% + 43.75px), rgba(0, 0, 0, 0) 99%, #000 101%) 50% calc(100% - 25px)/100px calc(51% - 25px) repeat-x;
 }
