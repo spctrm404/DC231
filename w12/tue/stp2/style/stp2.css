@@ -1,0 +1,51 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.wrapper {
+  max-width: 70ch;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+.site-title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+section {
+  padding-block: 5rem;
+}
+section .section-title {
+  font-size: 2.25rem;
+}
+section:nth-of-type(odd) {
+  background-color: darkgrey;
+}
+
+.diagonal {
+  position: relative;
+  background-color: darkgrey;
+  isolation: isolate;
+}
+.diagonal::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(45deg in oklab, oklch(80% 0.5 340) 0%, oklch(80% 0.5 200) 100%);
+  inset: 0;
+  transform: skewY(-5deg);
+  z-index: -1;
+}
