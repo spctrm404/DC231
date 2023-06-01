@@ -1,0 +1,214 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+$light-color: oklch(40% 0 0);
+$light-hover-color: oklch(40% 0.25 300);
+$light-odd-page-color: oklch(80% 0 300);
+$dark-color: oklch(80% 0 0);
+$dark-hover-color: oklch(80% 0.25 300);
+$dark-odd-page-color: oklch(40% 0 300);
+$page-height: max(100dvh, 37.5rem);
+
+html {
+  color-scheme: light dark;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui;
+  font-size: 1.125rem;
+}
+
+.wrapper {
+  margin-inline: auto;
+  max-width: 80ch;
+  padding-inline: 2rem;
+  min-height: $page-height;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+header {
+  h1 {
+    text-align: center;
+    text-wrap: balance;
+  }
+}
+
+.stickyWrap {
+  position: relative;
+  display: grid;
+}
+
+main {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+section {
+}
+
+aside {
+  grid-column: 1;
+  grid-row: 1;
+  position: sticky;
+  top: 0;
+  width: fit-content;
+  height: max(100dvh, 37.5rem);
+  font-size: 0.875rem;
+  padding-inline: 1rem 1.5rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(0.25rem);
+  -webkit-backdrop-filter: blur(0.25rem);
+  border-radius: 0 0.625rem 0.625rem 0;
+  border: 0.0625rem solid rgba(255, 255, 255, 0.18);
+  ol {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+  }
+  a {
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    transition: color 250ms ease-out;
+    &::before {
+      content: "";
+      width: 1rem;
+      height: 1rem;
+      border-radius: 999999rem;
+      border: 0.125rem solid;
+      transition: border-color 250ms ease-out;
+    }
+  }
+}
+
+footer {
+  .wrapper {
+    min-height: max(100dvh, 37.5rem);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  section {
+    &:nth-of-type(odd) {
+      background-color: $light-odd-page-color;
+    }
+  }
+  aside {
+    background: rgba(255, 255, 255, 0.25);
+    a {
+      color: $light-color;
+    }
+    li {
+      &::before {
+        border-color: $light-color;
+      }
+      &:hover {
+        &::before {
+          border-color: $light-hover-color;
+        }
+        color: $light-hover-color;
+      }
+    }
+    .pressed {
+      li {
+        &::before {
+          border-color: $light-hover-color;
+          background-color: $light-hover-color;
+        }
+        color: $light-hover-color;
+      }
+    }
+  }
+  footer {
+    background-color: $light-odd-page-color;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  section {
+    &:nth-of-type(odd) {
+      background-color: $dark-odd-page-color;
+    }
+  }
+  aside {
+    background: rgba(0, 0, 0, 0.25);
+    a {
+      color: $dark-color;
+    }
+    li {
+      &::before {
+        border-color: $dark-color;
+      }
+      &:hover {
+        &::before {
+          border-color: $dark-hover-color;
+        }
+        color: $dark-hover-color;
+      }
+    }
+    .pressed {
+      li {
+        &::before {
+          border-color: $dark-hover-color;
+          background-color: $dark-hover-color;
+        }
+        color: $dark-hover-color;
+      }
+    }
+  }
+  footer {
+    background-color: $dark-odd-page-color;
+  }
+}
+
+@media (width <= 62.5rem) {
+  aside {
+    width: unset;
+    height: fit-content;
+    padding-inline: unset;
+    padding-block: 1rem;
+    border-radius: 0 0 0.625rem 0.625rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    overflow-x: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    &::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
+    ol {
+      flex-direction: row;
+      justify-content: start;
+      gap: 4rem;
+    }
+    &::before,
+    &::after {
+      flex-shrink: 0;
+      content: "";
+      display: block;
+      width: 2rem;
+      height: 100%;
+    }
+  }
+}
