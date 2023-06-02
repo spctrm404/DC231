@@ -1,0 +1,73 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.invisible {
+  display: none;
+}
+
+.wrapper {
+  margin-inline: auto;
+  max-width: 80ch;
+  //   background-color: aqua;
+  padding-inline: 2rem;
+  min-height: max(50dvh, 25rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  &:nth-of-type(odd) {
+    background-color: darkkhaki;
+  }
+}
+
+footer {
+  background-color: grey;
+}
+
+aside {
+  ol {
+    list-style: none;
+    margin-block: 0;
+    padding-left: 0;
+  }
+  a {
+    text-transform: capitalize;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  li {
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  aside {
+    a {
+      color: black;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  aside {
+    a {
+      color: white;
+    }
+  }
+}
