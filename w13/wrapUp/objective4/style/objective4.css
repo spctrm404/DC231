@@ -77,16 +77,14 @@ aside ol {
   list-style: none;
   gap: 1.5rem;
 }
-aside a {
-  font-weight: 600;
-  text-decoration: none;
-  text-transform: capitalize;
-}
 aside li {
   display: flex;
   align-items: center;
   justify-content: center;
   transition: color 250ms ease-out;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: capitalize;
   gap: 0.75rem;
 }
 aside li::before {
@@ -132,7 +130,7 @@ footer .wrapper {
     background: rgba(246, 242, 247, 0.5);
     box-shadow: 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.3), 0 0.0625rem 0.1875rem 0.0625rem rgba(0, 0, 0, 0.15);
   }
-  aside a {
+  aside li {
     color: #1b1b1f;
   }
   aside li::before {
@@ -144,10 +142,10 @@ footer .wrapper {
   aside li:hover::before {
     border-color: #4756b2;
   }
-  aside .pressed li {
+  aside .pressed {
     color: #4756b2;
   }
-  aside .pressed li::before {
+  aside .pressed::before {
     border-color: #4756b2;
     background-color: #4756b2;
   }
@@ -173,7 +171,7 @@ footer .wrapper {
     background: rgba(27, 27, 31, 0.5);
     box-shadow: 0 0.0625rem 0.1875rem 0.0625rem rgba(0, 0, 0, 0.15), 0 0.0625rem 0.125rem rgba(0, 0, 0, 0.3);
   }
-  aside a {
+  aside li {
     color: #c8c5ca;
   }
   aside li::before {
@@ -185,10 +183,10 @@ footer .wrapper {
   aside li:hover::before {
     border-color: #bbc3ff;
   }
-  aside .pressed li {
+  aside .pressed {
     color: #bbc3ff;
   }
-  aside .pressed li::before {
+  aside .pressed::before {
     border-color: #bbc3ff;
     background-color: #bbc3ff;
   }

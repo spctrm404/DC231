@@ -96,17 +96,14 @@ aside {
     gap: 1.5rem;
   }
 
-  a {
-    font-weight: 600;
-    text-decoration: none;
-    text-transform: capitalize;
-  }
-
   li {
     display: flex;
     align-items: center;
     justify-content: center;
     transition: color 250ms ease-out;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: capitalize;
     gap: 0.75rem;
 
     &::before {
@@ -162,11 +159,9 @@ footer {
     box-shadow: 0 0.0625rem 0.125rem rgb(0 0 0 / 30%),
       0 0.0625rem 0.1875rem 0.0625rem rgb(0 0 0 / 15%);
 
-    a {
-      color: $onSurface-light;
-    }
-
     li {
+      color: $onSurface-light;
+
       &::before {
         border-color: $onSurface-light;
       }
@@ -181,14 +176,12 @@ footer {
     }
 
     .pressed {
-      li {
-        &::before {
-          border-color: $onSurfaceHover-light;
-          background-color: $onSurfaceHover-light;
-        }
-
-        color: $onSurfaceHover-light;
+      &::before {
+        border-color: $onSurfaceHover-light;
+        background-color: $onSurfaceHover-light;
       }
+
+      color: $onSurfaceHover-light;
     }
   }
 
@@ -222,11 +215,9 @@ footer {
     box-shadow: 0 0.0625rem 0.1875rem 0.0625rem rgb(0 0 0 / 15%),
       0 0.0625rem 0.125rem rgb(0 0 0 / 30%);
 
-    a {
-      color: $onSurface-dark;
-    }
-
     li {
+      color: $onSurface-dark;
+
       &::before {
         border-color: $onSurface-dark;
       }
@@ -241,14 +232,12 @@ footer {
     }
 
     .pressed {
-      li {
-        &::before {
-          border-color: $onSurfaceHover-dark;
-          background-color: $onSurfaceHover-dark;
-        }
-
-        color: $onSurfaceHover-dark;
+      &::before {
+        border-color: $onSurfaceHover-dark;
+        background-color: $onSurfaceHover-dark;
       }
+
+      color: $onSurfaceHover-dark;
     }
   }
 

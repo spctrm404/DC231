@@ -108,7 +108,7 @@ aside {
         width: 1rem;
         height: 1rem;
         margin-top: 0.125rem;
-        transition: border-color 150ms ease-out;
+        transition: border-color 150ms ease-out, background-color 150ms ease-out;
         border: 0.125rem solid $onSurface;
         border-radius: 999999999px;
       }
@@ -118,6 +118,15 @@ aside {
 
         &::before {
           border-color: $accent;
+        }
+      }
+
+      &.pressed {
+        color: $accent;
+
+        &::before {
+          border-color: $accent;
+          background-color: $accent;
         }
       }
     }
@@ -140,8 +149,7 @@ aside {
 
   .indicator {
     position: absolute;
-
-    // transform: scaleX(100%);
+    transform: scaleX(0);
     transform-origin: left;
     background-color: $accent;
     inset: 0;
