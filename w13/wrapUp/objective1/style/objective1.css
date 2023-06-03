@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.hide {
+  display: none;
+}
+
 html {
   color-scheme: light dark;
   scroll-behavior: smooth;
@@ -35,6 +39,8 @@ header h1 {
 .stickyWrap {
   position: relative;
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 }
 
 main {

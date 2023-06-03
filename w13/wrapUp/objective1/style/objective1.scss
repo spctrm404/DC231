@@ -12,6 +12,10 @@ $dark-hover-color: oklch(80% 0.25 300);
 $dark-odd-page-color: oklch(40% 0 300);
 $page-height: max(100dvh, 37.5rem);
 
+.hide {
+  display: none;
+}
+
 html {
   color-scheme: light dark;
   scroll-behavior: smooth;
@@ -45,14 +49,13 @@ header {
 .stickyWrap {
   position: relative;
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
 }
 
 main {
   grid-column: 1;
   grid-row: 1;
-}
-
-section {
 }
 
 aside {
