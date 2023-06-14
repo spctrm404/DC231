@@ -34,7 +34,7 @@ const whenPageInView = (observeredPaged) => {
 
 const observer = new IntersectionObserver(whenPageInView, {
   root: null,
-  rootMargin: "0px 0px -90% 0px",
+  rootMargin: "-1px 0px -90% 0px",
   threshold: [0],
 });
 
